@@ -3,5 +3,6 @@
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
   </Folder>
+  <Project Path="Andromeda.Exe.DeviceConfiguration.Data.Context\Andromeda.Exe.DeviceConfiguration.Data.Context.csproj" />
   <Project Path="Andromeda.Exe.DeviceConfiguration.Server\Andromeda.Exe.DeviceConfiguration.Server.csproj" />
 </Solution>
