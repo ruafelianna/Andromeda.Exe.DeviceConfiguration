@@ -16,4 +16,12 @@
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Andromeda.Data.Context" Version="1.0.0-rc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.Exe.DeviceConfiguration.Data.Context.Abstractions\Andromeda.Exe.DeviceConfiguration.Data.Context.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
