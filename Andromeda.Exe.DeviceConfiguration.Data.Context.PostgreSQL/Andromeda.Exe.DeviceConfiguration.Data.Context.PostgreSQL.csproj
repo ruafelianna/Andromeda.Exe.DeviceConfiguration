@@ -16,4 +16,12 @@
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.Exe.DeviceConfiguration.Data.Context\Andromeda.Exe.DeviceConfiguration.Data.Context.csproj" />
+  </ItemGroup>
+
 </Project>
