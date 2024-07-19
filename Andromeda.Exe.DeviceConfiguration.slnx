@@ -4,6 +4,7 @@
     <File Path=".gitignore" />
     <File Path="nuget.config" />
   </Folder>
+  <Project Path="Andromeda.Exe.DeviceConfiguration.Data.Context.Abstractions\Andromeda.Exe.DeviceConfiguration.Data.Context.Abstractions.csproj" />
   <Project Path="Andromeda.Exe.DeviceConfiguration.Data.Context\Andromeda.Exe.DeviceConfiguration.Data.Context.csproj" />
   <Project Path="Andromeda.Exe.DeviceConfiguration.Server\Andromeda.Exe.DeviceConfiguration.Server.csproj" />
 </Solution>
