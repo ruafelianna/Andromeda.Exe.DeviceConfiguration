@@ -8,5 +8,6 @@
   <Project Path="Andromeda.Exe.DeviceConfiguration.Data.Context.PostgreSQL\Andromeda.Exe.DeviceConfiguration.Data.Context.PostgreSQL.csproj" />
   <Project Path="Andromeda.Exe.DeviceConfiguration.Data.Context\Andromeda.Exe.DeviceConfiguration.Data.Context.csproj" />
   <Project Path="Andromeda.Exe.DeviceConfiguration.Data.Models\Andromeda.Exe.DeviceConfiguration.Data.Models.csproj" />
+  <Project Path="Andromeda.Exe.DeviceConfiguration.DTOs\Andromeda.Exe.DeviceConfiguration.DTOs.csproj" />
   <Project Path="Andromeda.Exe.DeviceConfiguration.Server\Andromeda.Exe.DeviceConfiguration.Server.csproj" />
 </Solution>
