@@ -6,6 +6,6 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Models
     public abstract class EntityBase
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long Id { get; private set; }
+        public long Id { get; protected set; }
     }
 }
