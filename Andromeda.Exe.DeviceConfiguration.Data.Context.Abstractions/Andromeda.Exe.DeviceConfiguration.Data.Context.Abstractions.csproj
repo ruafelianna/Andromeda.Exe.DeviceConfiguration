@@ -20,4 +20,8 @@
     <PackageReference Include="Andromeda.Data.Context.Abstractions" Version="1.0.0-rc" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.Exe.DeviceConfiguration.Data.Models\Andromeda.Exe.DeviceConfiguration.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>
