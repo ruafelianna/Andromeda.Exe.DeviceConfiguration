@@ -6,8 +6,17 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Models.App
 {
     public partial class LoginRecord
     {
-        public class Builder : EntityBuilderBase<Builder, LoginRecord>
+        public sealed class Builder : EntityBuilderBase<LoginRecord>
         {
+            public Builder()
+            {
+                RequiredMethods.Add(nameof(AddAppInstance));
+                RequiredMethods.Add(nameof(AddTs));
+                RequiredMethods.Add(nameof(AddOSInfo));
+                RequiredMethods.Add(nameof(AddProcessor));
+                RequiredMethods.Add(nameof(AddMotherboard));
+            }
+
             internal Builder AddAppInstance(AppInstance appInstance)
             {
                 ArgumentNullException.ThrowIfNull(appInstance);
@@ -147,19 +156,8 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Models.App
                 return this;
             }
 
-            protected override void AddRequiredMethods()
-            {
-                RequiredMethods.Add(nameof(AddAppInstance));
-                RequiredMethods.Add(nameof(AddTs));
-                RequiredMethods.Add(nameof(AddOSInfo));
-                RequiredMethods.Add(nameof(AddProcessor));
-                RequiredMethods.Add(nameof(AddMotherboard));
-            }
-
             protected override LoginRecord CreateObj()
                 => new();
-
-            protected override void ValidateObj() { }
         }
     }
 }
