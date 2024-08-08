@@ -19,5 +19,7 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Context
         public DbSet<AppInstance> AppInstances { get; set; }
 
         public DbSet<LoginRecord> LoginRecords { get; set; }
+
+        public DbSet<HttpErrorRecord> HttpErrorRecords { get; set; }
     }
 }

@@ -4,8 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace Andromeda.Exe.DeviceConfiguration.Data.Models.Builder
 {
-    public abstract class EntityBuilderBase<TSelf, T>
-        where TSelf : EntityBuilderBase<TSelf, T>
+    public abstract class EntityBuilderBase<T>
     {
         protected EntityBuilderBase()
         {
@@ -27,13 +26,11 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Models.Builder
 
         protected readonly T _obj;
 
-        protected readonly HashSet<string> RequiredMethods;
+        protected HashSet<string> RequiredMethods { get; }
 
         protected abstract T CreateObj();
 
-        protected abstract void ValidateObj();
-
-        protected abstract void AddRequiredMethods();
+        protected virtual void ValidateObj() { }
 
         protected void MethodCalled([CallerMemberName]string? name = null)
             => RequiredMethods.Remove(name!);

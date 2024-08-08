@@ -8,5 +8,6 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Context.Abstractions
     {
         DbSet<AppInstance> AppInstances { get; }
         DbSet<LoginRecord> LoginRecords { get; }
+        DbSet<HttpErrorRecord> HttpErrorRecords { get; }
     }
 }

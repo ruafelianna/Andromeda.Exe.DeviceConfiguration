@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace Andromeda.Exe.DeviceConfiguration.Data.Models.App
 {
@@ -24,6 +26,17 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Models.App
 
         [Required]
         public DateTime Created { get; private set; }
+
+        [Required]
+        public bool IsOnline { get; private set; }
+
+        [Required]
+        public long Token { get; private set; }
+
+        public DateTime? LastOnline { get; private set; }
+
+        [Timestamp, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public byte[] RowVersion { get; private set; }
 
         #endregion
 
@@ -66,8 +79,31 @@ namespace Andromeda.Exe.DeviceConfiguration.Data.Models.App
 
         #region Methods to change properties
 
+        private static readonly long MaxEcmaScriptInteger
+            = Enumerable
+                .Repeat(2L, 53)
+                .Aggregate(1L, (prod, next) => next * prod);
+
         public void ChangeName(string name)
             => Name = name;
+
+        public long CreateToken()
+        {
+            Token = Random.Shared.NextInt64(
+                -MaxEcmaScriptInteger,
+                MaxEcmaScriptInteger
+            );
+            return Token;
+        }
+
+        public void ConfirmOnline()
+        {
+            IsOnline = true;
+            LastOnline = DateTime.UtcNow;
+        }
+
+        public void MakeOffline()
+            => IsOnline = false;
 
         #endregion
 
