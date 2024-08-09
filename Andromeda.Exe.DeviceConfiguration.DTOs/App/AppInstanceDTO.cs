@@ -12,12 +12,12 @@ namespace Andromeda.Exe.DeviceConfiguration.DTOs.App
         string Name
     );
 
-    public record AppInstanceDTO_ReportAlive(
+    public record AppInstanceDTO_ReportStatus(
         Guid Guid,
         long? Token = null
     );
 
-    public record AppInstanceDTO_ConfirmAlive(
+    public record AppInstanceDTO_ConfirmOnline(
         long Token
     );
 }
