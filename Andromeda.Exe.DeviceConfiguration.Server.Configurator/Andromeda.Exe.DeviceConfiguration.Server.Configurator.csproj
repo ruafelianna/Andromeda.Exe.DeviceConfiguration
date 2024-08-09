@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup Label="FrameworkProperties">
+    <OutputType>exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -15,5 +16,14 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.1.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.1.2" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.2" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.2" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.2" />
+    <PackageReference Include="ReactiveUI.Fody" Version="19.5.41" />
+  </ItemGroup>
 
 </Project>
