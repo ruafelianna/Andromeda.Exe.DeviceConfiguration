@@ -24,4 +24,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.Exe.DeviceConfiguration.Data.Models\Andromeda.Exe.DeviceConfiguration.Data.Models.csproj" />
+    <ProjectReference Include="..\Andromeda.Exe.DeviceConfiguration.DTOs\Andromeda.Exe.DeviceConfiguration.DTOs.csproj" />
+  </ItemGroup>
+
 </Project>
