@@ -16,4 +16,11 @@
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.1.2" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.2" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.2" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.2" />
+  </ItemGroup>
+
 </Project>

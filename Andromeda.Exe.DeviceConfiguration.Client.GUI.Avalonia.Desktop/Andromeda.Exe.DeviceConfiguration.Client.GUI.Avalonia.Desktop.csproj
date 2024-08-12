@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <OutputType>exe</OutputType>
   </PropertyGroup>
 
   <PropertyGroup Label="AssemblyProperties">
@@ -15,5 +16,13 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="11.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.Exe.DeviceConfiguration.Client.GUI.Avalonia\Andromeda.Exe.DeviceConfiguration.Client.GUI.Avalonia.csproj" />
+  </ItemGroup>
 
 </Project>
