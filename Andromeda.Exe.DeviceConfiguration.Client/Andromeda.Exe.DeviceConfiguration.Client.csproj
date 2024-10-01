@@ -16,4 +16,8 @@
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Andromeda.Configuration" Version="1.0.0-rc" />
+  </ItemGroup>
+
 </Project>
